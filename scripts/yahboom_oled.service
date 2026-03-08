@@ -1,0 +1,12 @@
+[Unit]
+Description=yahboom_oled start service
+After=multi-user.target
+
+[Service]
+Type=idle
+User=ron
+ExecStart=/bin/sh -c "python3 /home/ron/bin/oled.py"
+WorkingDirectory=/home/ron
+
+[Install]
+WantedBy=multi-user.target
